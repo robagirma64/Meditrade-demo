@@ -14,6 +14,17 @@ import sqlite3
 from datetime import datetime
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
+# Keep the bot alive on Render without a paid worker
+import threading
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+
+def keep_alive():
+    port = int(os.environ.get("PORT", 8080))
+    server = HTTPServer(("0.0.0.0", port), SimpleHTTPRequestHandler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+
+keep_alive()
+
 
 load_dotenv()
 
