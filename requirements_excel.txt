@@ -1,0 +1,10 @@
+# Excel Processing Requirements for Blue Pharma Bot
+# Install these packages to enable bulk medicine upload via Excel
+
+pandas>=1.5.0
+openpyxl>=3.0.0
+
+# Installation command:
+# pip install pandas openpyxl
+
+# After installation, restart the bot to enable Excel functionality

@@ -1,0 +1,84 @@
+Blue Pharma Trading PLC Telegram Bot - BotFather Commands
+============================================================
+
+📋 PASTE THESE COMMANDS INTO BOTFATHER:
+
+/setcommands
+
+Then paste this list:
+
+start - 🏥 Main menu and welcome
+help - ℹ️ Show available commands
+contact - 📞 Contact information
+hours - 🕒 Business hours
+check - 💊 Check medicine price and stock
+search - 🔍 Search medicines
+order - 🛒 Place a new order
+my_orders - 📦 View your order history
+wholesale_check - 🏢 Check wholesale prices (wholesale only)
+bulk_order - 📦 Place bulk order (wholesale only)
+wholesale_catalog - 📋 View wholesale catalog
+request_wholesale - 🏢 Request wholesale access
+update_stock - 📝 Update medicine stock (staff only)
+update_price - 💰 Update medicine prices (staff only)
+add_medicine - ➕ Add new medicine interactively (staff only)
+view_stock - 📊 View comprehensive stock overview (staff only)
+view_orders - 📦 View all orders (staff only)
+mark_order - ✅ Update order status (staff only)
+stats - 📊 View pharmacy statistics (staff only)
+pending_requests - 👥 View wholesale requests (staff only)
+approve_wholesale - ✅ Approve wholesale access (staff only)
+create_client - 👤 Create wholesale client (staff only)
+log_inquiry - 📝 Log customer inquiry (staff only)
+
+============================================================
+
+📝 ADDITIONAL BOTFATHER SETUP COMMANDS:
+
+1. Set Bot Description:
+/setdescription
+
+Blue Pharma Trading PLC Official Telegram Bot
+
+Your trusted pharmacy partner with comprehensive medicine inventory, wholesale services, and convenient ordering system. Features include real-time stock checking, secure ordering, wholesale access for businesses, and professional staff management tools.
+
+2. Set About Text:
+/setabouttext
+
+🏥 Blue Pharma Trading PLC
+Professional pharmaceutical services with modern convenience.
+
+Features:
+✅ Medicine search & stock checking
+✅ Secure online ordering
+✅ Wholesale business accounts  
+✅ Real-time inventory management
+✅ Multi-tier user system
+✅ Professional staff tools
+
+Contact us for quality medicines and exceptional service!
+
+3. Set Bot Picture (optional):
+/setuserpic
+(Upload your pharmacy logo/image)
+
+============================================================
+
+🎯 BOTFATHER CONVERSATION FLOW:
+
+1. Start chat with @BotFather
+2. Type: /setcommands
+3. Select your bot from the list
+4. Paste the commands list above
+5. Optionally set description and about text
+6. Your bot menu will be ready!
+
+============================================================
+
+💡 NOTES:
+- Commands are automatically organized by user role
+- Staff commands only appear for authorized users
+- The bot handles role-based access control automatically
+- Users will see relevant commands based on their permissions
+
+🚀 Your bot is now ready with a professional command interface!
