@@ -43,8 +43,7 @@ def keep_alive():
     server = HTTPServer(("0.0.0.0", port), HealthHandler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
 
-keep_alive()
-time.sleep(5) 
+keep_alive() 
 
 
 load_dotenv()
