@@ -9,21 +9,31 @@ import sys
 import logging
 import asyncio
 import os
+import time
 import tempfile
 import sqlite3
 from datetime import datetime
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
 # Keep the bot alive on Render without a paid worker
+import os
 import threading
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+class HealthHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/plain")
+        self.end_headers()
+        self.wfile.write(b"Blue Pharma Bot is alive ")
 
 def keep_alive():
     port = int(os.environ.get("PORT", 8080))
-    server = HTTPServer(("0.0.0.0", port), SimpleHTTPRequestHandler)
+    server = HTTPServer(("0.0.0.0", port), HealthHandler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
 
 keep_alive()
+time.sleep(5) 
 
 
 load_dotenv()
