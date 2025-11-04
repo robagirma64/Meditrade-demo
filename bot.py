@@ -27,6 +27,17 @@ class HealthHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"Blue Pharma Bot is alive ")
 
+    def do_HEAD(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/plain")
+        self.end_headers()
+        
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header("Allow", "GET, HEAD, OPTIONS")
+        self.end_headers()
+
+
 def keep_alive():
     port = int(os.environ.get("PORT", 8080))
     server = HTTPServer(("0.0.0.0", port), HealthHandler)
